@@ -1,0 +1,6 @@
+[build]
+  command = "python manage.py collectstatic --noinput && python manage.py migrate"
+  publish = "trabajo_1/templates/static"
+
+[context.production.environment]
+  DJANGO_SETTINGS_MODULE = "your_project.settings.production"
