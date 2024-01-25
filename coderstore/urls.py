@@ -5,15 +5,13 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 
-
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'),
     path('meat/', include('meat.urls')),
     path('drink/', include('drink.urls')),
     path('bakery/', include('bakery.urls')),
-    path('search/',search_products, name='search-products'),
+    path('search/', search_products, name='search-products'),
     path('inicio/', home_page, name='inicio'),
     path('user/', include('users.urls')),
     path('contact/', include('contact.urls')),
@@ -21,5 +19,4 @@ urlpatterns = [
     path('stock/', include('stock.urls')),
     path('cart/', include('cart.urls')),
     path('about/', about_us, name='about')
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
