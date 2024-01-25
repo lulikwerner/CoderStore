@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{%block title%}
+Creador de panes
+{%endblock%}
+
+{%block text%}
+
+<h1 style="text-align:center ;margin-top: 3rem;">Panes</h1>
+<div class="container" style="align-items:center ; max-width:900px ;">
+<form action="" method='POST'enctype="multipart/form-data" style="margin-left: 35% ; margin-top: 7%; margin-bottom: 10%; ">
+    {% csrf_token %}
+
+    {{form | crispy}}
+
+    <button type="submit" class="btn btn-primary">Crear</button>
+    <input type="button" value="Volver"  onclick="history.back()">
+</form>
+</div>
+{% endblock %}

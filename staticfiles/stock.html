@@ -1,0 +1,68 @@
+
+
+{% extends 'base.html' %}
+
+{% load static %}
+
+    {% block link %}
+      <link type="text/css" href="{% static '/css/style.css' %}" rel="stylesheet" />
+    {%endblock%}
+
+
+    {% block title %}
+        Stock
+    {% endblock %}
+
+    {%block text%}  
+    <div class="btn-group" role="group" aria-label="Button group with nested dropdown"style="margin-left:1% ; margin-top:2rem">    
+      <div class="btn-group" role="group">
+        <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Crear Nuevo
+        </button>
+        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+          <a class="dropdown-item" href="/meat/create-meats/">Nueva Carne</a>
+          <a class="dropdown-item" href="/bakery/create-bakeries/">Nueva Panes</a>
+          <a class="dropdown-item" href="/drink/create-drinks/">Nueva Bebida</a>
+        </div>
+      </div>
+    </div>
+    <div style="margin:1% ;">
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Stock</th>
+            <th scope="col">Precio</th>
+
+          </tr>
+        </thead>      
+    {% for i in products %} 
+ 
+    
+        <tbody>
+          <tr>
+            <th scope="row">{{i.id}}</th>
+            <td>{{i.name}}</td>
+            <td>{{i.stock}}</td>
+            <td>${{i.price}}</td>
+            <td>{{i.sku}}</td>
+            {%if i.category == 3%}
+            <td><a class="btn btn-warning" href="/../drink/edit-drinks/{{i.id}}/" role="button">Editar</a></td>
+            <td><a class="btn btn-danger" href="/../drink/delete-drinks/{{i.id}}/" role="button">Borrar</a></td>
+            {%elif i.category == 1%}
+            <td><a class="btn btn-warning" href="/../meat/edit-meats/{{i.id}}/" role="button">Editar</a></td>
+            <td><a class="btn btn-danger" href="/../meat/delete-meats/{{i.id}}/" role="button">Borrar</a></td>
+            {%elif i.category == 2%}
+            <td><a class="btn btn-warning" href="/../bakery/edit-bakeries/{{i.id}}/" role="button">Editar</a></td>
+            <td><a class="btn btn-danger" href="/../bakery/delete-bakeries/{{i.id}}/" role="button">Borrar</a></td>
+            {%endif%}
+          </tr>
+          
+        </tbody>
+      
+
+    {% endfor %}
+</table>
+</div>
+    {% endblock %}
