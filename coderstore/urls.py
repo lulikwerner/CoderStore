@@ -22,4 +22,4 @@ urlpatterns = [
     path('cart/', include('cart.urls')),
     path('about/', about_us, name='about')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-+ static(settings.MEDIA_URL, document_root=settings.STATIC_ROOT)
++ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
