@@ -1,6 +1,6 @@
 [build]
   command = "python3 manage.py collectstatic --noinput && python3 manage.py migrate"
-  publish = "trabajo_1/templates/static"
+  publish = "templates/static"
 
 [context.production.environment]
   DJANGO_SETTINGS_MODULE = "coderstore.settings"
