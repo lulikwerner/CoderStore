@@ -1,5 +1,5 @@
 [build]
-  command = "python manage.py collectstatic --noinput && python manage.py migrate"
+  command = "python3 manage.py collectstatic --noinput && python3 manage.py migrate"
   publish = "trabajo_1/templates/static"
 
 [context.production.environment]
