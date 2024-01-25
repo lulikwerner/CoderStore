@@ -4,7 +4,6 @@ from coderstore.views import all_products, home_page, search_products, index, ab
 from django.conf.urls.static import static
 from django.conf import settings
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'),
@@ -19,4 +18,7 @@ urlpatterns = [
     path('stock/', include('stock.urls')),
     path('cart/', include('cart.urls')),
     path('about/', about_us, name='about')
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]
+
+# Combine the static() calls into a single line
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
