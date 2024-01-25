@@ -3,4 +3,4 @@
   publish = "trabajo_1/templates/static"
 
 [context.production.environment]
-  DJANGO_SETTINGS_MODULE = "your_project.settings.production"
+  DJANGO_SETTINGS_MODULE = "coderstore.settings"
