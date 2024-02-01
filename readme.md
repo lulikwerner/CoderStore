@@ -13,7 +13,7 @@
 - Virtualenv 20.16.3 (opcional)
 
 **repo github**
-[GitHub](https://github.com/lucasbadino/trabajo_1)
+[GitHub](https://github.com/lulikwerner/CoderStore.git)
 
 **VIDEO DESCRIPTIVO**
 [YouTube](https://youtu.be/DbLyT8T7-wk)
