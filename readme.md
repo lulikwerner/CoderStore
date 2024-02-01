@@ -71,7 +71,7 @@ Al ingresar a la web se visualisaran los accesos directos a las categorias de pr
     ---
 ***Listas de tareas***
 - [x] Herencia Html
-- [x] Repo en [Git Hub](https://github.com/lucasbadino/trabajo_1)
+- [x] Repo en [Git Hub](https://github.com/lulikwerner/CoderStore.git)
 - [x] 3 Clases de productos 
 - [x] Forms para agregar productos DB
 - [x] Form busqueda DB
