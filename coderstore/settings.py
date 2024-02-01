@@ -76,6 +76,7 @@ TEMPLATES = [
             os.path.join(BASE_DIR, "templates/drink"),
             os.path.join(BASE_DIR, "templates/meat"),
             os.path.join(BASE_DIR, "templates/users"),
+            os.path.join(BASE_DIR, "venv/crispy_forms"),
                          ],
         'APP_DIRS': True,
         'OPTIONS': {
