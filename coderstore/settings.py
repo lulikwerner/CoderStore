@@ -69,7 +69,14 @@ ROOT_URLCONF = 'coderstore.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR, "templates"],
+        'DIRS': [
+            os.path.join(BASE_DIR, "templates"),
+            os.path.join(BASE_DIR, "templates/bakery"),
+            os.path.join(BASE_DIR, "templates/cart"),
+            os.path.join(BASE_DIR, "templates/drink"),
+            os.path.join(BASE_DIR, "templates/meat"),
+            os.path.join(BASE_DIR, "templates/users"),
+                         ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
