@@ -6,14 +6,21 @@
 - Lucas Castiglioni
 ---
 **Requisitos** 
-- Django 4.0.6
-- Python 3.10
-- Django-crispy-forms 1.14.0
-- Pillow 9.2.0
-- Virtualenv 20.16.3 (opcional)
+- asgiref 3.7.2
+- dj-database-url 2.1.0
+- Django 5.0.1
+- django-crispy-forms 2.1
+- gunicorn 21.2.0
+- packaging 23.2
+- pillow 10.2.0
+- psycopg2-binary 2.9.9
+- pytz 2023.4
+- sqlparse 0.4.4
+- typing_extensions 4.9.0
+- whitenoise 6.6.0
 
 **repo github**
-[GitHub](https://github.com/lucasbadino/trabajo_1)
+[GitHub](https://github.com/lulikwerner/CoderStore.git)
 
 **VIDEO DESCRIPTIVO**
 [YouTube](https://youtu.be/DbLyT8T7-wk)
@@ -25,7 +32,7 @@ Para inicializar el proyecto deberas colocar en la consola el siguiente comando:
 ![](https://media.discordapp.net/attachments/1004393238276362365/1005977594602201238/Screen_Shot_2022-08-07_at_7.14.04_PM.png?width=1025&height=105)
 
 
-Para acceder a la Web [CoderStore](http://coderstore.pythonanywhere.com/)
+Para acceder a la Web [CoderStore](https://coderstore.onrender.com)
 
 1. ***Inicio***
 
@@ -71,7 +78,7 @@ Al ingresar a la web se visualisaran los accesos directos a las categorias de pr
     ---
 ***Listas de tareas***
 - [x] Herencia Html
-- [x] Repo en [Git Hub](https://github.com/lucasbadino/trabajo_1)
+- [x] Repo en [Git Hub](https://github.com/lulikwerner/CoderStore.git)
 - [x] 3 Clases de productos 
 - [x] Forms para agregar productos DB
 - [x] Form busqueda DB
