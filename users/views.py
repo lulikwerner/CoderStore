@@ -18,9 +18,9 @@ def login_request(request):
             email = form.cleaned_data.get('email')
             password = form.cleaned_data.get('password')
             user = authenticate(username = username, password = password)
+            print(user)
             if user is not None:
-                
-                
+              
                 login(request, user)
                 all = Products.objects.all()
                 context = {	
